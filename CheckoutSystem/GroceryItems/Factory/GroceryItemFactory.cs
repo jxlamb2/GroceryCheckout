@@ -15,6 +15,11 @@ namespace GroceryItems.Factory
             return new GroceryItem(2, "Orange", .65m);
         }
 
+        private static GroceryItem GetBanana()
+        {
+            return new GroceryItem(3, "Banana", .60m);
+        }
+
         public static GroceryItem CreateGroceryItem(string itemName)
         {
             switch (itemName)
@@ -23,6 +28,8 @@ namespace GroceryItems.Factory
                     return GetApple();
                 case "Orange":
                     return GetOrange();
+                case "Banana":
+                    return GetBanana();
                 default:
                     throw new ArgumentOutOfRangeException(nameof(itemName),
                         "Invalid string argument passed to CreateGroceryItem method.");
@@ -37,6 +44,8 @@ namespace GroceryItems.Factory
                     return GetApple();
                 case 2:
                     return GetOrange();
+                case 3:
+                    return GetBanana();
                 default:
                     throw new ArgumentOutOfRangeException(nameof(itemId),
                         "Invalid integer argument passed to CreateGroceryItem method.");

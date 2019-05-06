@@ -10,9 +10,9 @@ namespace CheckoutSystemDemo
     {
         static void Main(string[] args)
         {
-            var cartCalculator = new GroceryCalculator(new BuyOneGetOneApple(), new BuyTwoGetOneOrange());
+            var cartCalculator = new GroceryCalculator(new BuyOneGetCheaperOne(), new BuyTwoGetOneOrange());
             var shoppingCart = new ShoppingCart(cartCalculator);
-            var itemsToAdd = new List<int>() { 1, 1, 1, 1, 2, 2, 2 };
+            var itemsToAdd = new List<int>() { 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3 };
             shoppingCart.AddItems(itemsToAdd);
             Console.WriteLine(shoppingCart.DisplayCartItems());
             Console.WriteLine($"Total: {shoppingCart.GetCartTotal():C}");
