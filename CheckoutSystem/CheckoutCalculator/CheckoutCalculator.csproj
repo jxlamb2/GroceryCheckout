@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="SaleRules\Rules\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GroceryItems\GroceryItems.csproj" />
   </ItemGroup>
 
